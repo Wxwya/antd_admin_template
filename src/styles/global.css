@@ -1,0 +1,29 @@
+@import "./antd.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+  --primary-color:linear-gradient(180.00deg, rgb(76, 141, 235),rgb(76, 96, 235) 100%);
+  --primary-color-dark:#0050b3;
+  --primary-color-light:#3399ff;
+  --primary-selected-color:rgba(35, 80, 188, 0.3);
+
+  .ant-layout{
+    --ant-layout-header-bg:#fff;
+    --ant-layout-sider-bg:var(--primary-color);
+  }
+  .ant-menu{
+    --ant-menu-item-bg:var(--primary-color);
+    --ant-menu-item-selected-bg:var(--primary-selected-color);
+    --ant-menu-item-color:#fff;
+    --ant-menu-item-selected-color:#fff;
+    --ant-menu-item-hover-color:#fff;
+    --ant-menu-item-active-bg:rgba(0,0,0,.1)
+  }
+}
+
+[data-theme="dark"] {
+  .ant-layout{
+    --ant-layout-header-bg:rgb(30,37,49);
+  }
+}

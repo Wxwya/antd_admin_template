@@ -1,0 +1,18 @@
+/*  更改滚动条样式 */
+.ant-layout-sider-children{
+  overflow-y: auto;
+}
+.menu_container::-webkit-scrollbar {
+  width: 3px;
+  height: 6px;
+}
+
+.menu_container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0,.3);
+  border-radius: 3px;
+}
+
+.menu_container::-webkit-scrollbar-track {
+  background-color: rgba(141, 141, 141, .1);
+  border-radius: 3px;
+}
