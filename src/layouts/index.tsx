@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-
 import Level from "./level"
 import Vertical from "./vertical"
 import useSystemStore from "@/store/systemStore"
