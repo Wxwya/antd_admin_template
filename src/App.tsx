@@ -6,7 +6,7 @@ import "dayjs/locale/zh-cn";
 import useSystemStore from "@/store/systemStore";
 import { useEffect, useMemo } from "react";
 import Content from "@/utils/createContext";
-
+import api from "@/api";
 function App() {
   const themes = useSystemStore((state) => state.theme);
   const permissions = useSystemStore((state) => state.permissions);
@@ -25,7 +25,7 @@ function App() {
             themes === "dark" ? theme.darkAlgorithm : theme.defaultAlgorithm,
         }}
       >
-        <Content.Provider value={{ navlist }}>{element}</Content.Provider>
+        <Content.Provider value={{ navlist,api }}>{element}</Content.Provider>
       </ConfigProvider>
     </>
   );

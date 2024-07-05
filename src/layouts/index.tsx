@@ -5,7 +5,7 @@ import useSystemStore from "@/store/systemStore"
 import content from "@/utils/createContext"
 const Layouts = () => {
   const layout = useSystemStore(state => state.layout);
-  const { navlist } = useContext(content)
+  const { navlist} = useContext(content)
   const [items,setItems] = useState([])
 
   const handleNavlist = (list:any) => {
@@ -28,6 +28,7 @@ const Layouts = () => {
     return arr
   }
   useEffect(() => { 
+    
     setItems(handleNavlist(navlist))
   },[])
 
