@@ -5,7 +5,7 @@ import useSystemStore from "@/store/systemStore"
 import content from "@/utils/createContext"
 const Layouts = () => {
   const layout = useSystemStore(state => state.layout);
-  const { navlist} = useContext(content)
+  const { navlist } = useContext(content)  as any
   const [items,setItems] = useState([])
 
   const handleNavlist = (list:any) => {
@@ -13,7 +13,7 @@ const Layouts = () => {
       if (cur.path === '/') {
         return prev
       }
-      let obj = { key: cur.path, label: cur.meta.title, icon: cur.meta.icon }
+      let obj:any= { key: cur.path, label: cur.meta.title, icon: cur.meta.icon }
       if (cur.children && cur.children.length == 1) {
         obj.key=cur.children[0].path
         obj.label = cur.children[0].meta.title

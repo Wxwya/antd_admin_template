@@ -10,9 +10,9 @@ class UserStore {
 }
 
 const useUserStore = create<UserStore>()(
-  immer((set) => ({...new UserStore()}))
+  immer(() => ({...new UserStore()}))
 )
-const getuserinfo = () => { 
+const getuserinfo = (): Promise<{ code: number; data: any }> => { 
   return new Promise((resolve) => {
     setTimeout(() => { 
       resolve({ code: 200, data: {username:"123"} })

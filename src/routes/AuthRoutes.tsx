@@ -1,7 +1,7 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect,ReactNode } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import useUserStore,{initUserinfo} from "@/store/userStore";
-const authRouter: FC = ({ children }) => {
+const authRouter:FC<{ children: ReactNode }>  = ({ children }) => {
   const userInfo = useUserStore((state) => state.userInfo);
   const location = useLocation();
   const navigate = useNavigate();

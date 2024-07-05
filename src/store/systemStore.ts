@@ -13,7 +13,7 @@ class StoreState  {
 const useSystemStore = create<StoreState>()(
   immer(
     persist(
-      (set) => (new StoreState()),
+      () => (new StoreState()),
       {
         name: "systemSrore",
         partialize: (state) =>
