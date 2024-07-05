@@ -2,7 +2,6 @@ import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import { persist } from "zustand/middleware";
 import { createSelectors } from "@/utils/createStore";
-type Layout = "level" | "vertical"; // level 水平布局 vertical 垂直布局
 
 class StoreState  {
   layout:Layout = "level"

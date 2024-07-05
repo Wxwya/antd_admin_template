@@ -1,0 +1,1 @@
+type Layout = "level" | "vertical";

@@ -1,14 +1,7 @@
 import { memo, useMemo } from "react";
-import useSystemStore, {
-  changeLayout,
-  changeCollapsed,
-  changeTheme,
-} from "@/store/systemStore";
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-} from "@ant-design/icons";
-import { Button, Dropdown, Space } from "antd";
+import useSystemStore, {changeLayout,changeCollapsed,changeTheme,} from "@/store/systemStore";
+import {MenuFoldOutlined,MenuUnfoldOutlined,} from "@ant-design/icons";
+import {  Dropdown } from "antd";
 import type { MenuProps } from "antd";
 const Head = () => {
   const layout = useSystemStore((state) => state.layout);
@@ -39,7 +32,6 @@ const Head = () => {
     </div>),
     vertical:(<img src="https://upload.shejihz.com/2020/02/961c95fffbdd3ecc99fdb4e33faa8237.jpg" className="w-[400px] h-full"></img>)
   }),[layout]) 
-  // onClick={changeLayout}
   return (
     <>
       <div

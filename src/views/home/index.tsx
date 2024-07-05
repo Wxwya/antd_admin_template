@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => { 
   const navigate = useNavigate()
   const toPage = () => {
-    navigate('/about')
+    navigate('/info/about')
   }
   return (<>
     <div className="h-10 py-2">
