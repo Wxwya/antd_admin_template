@@ -2,8 +2,6 @@ import { useMemo, useState } from "react"
 
 const useTheme = () => {
   const [themes, setThemes] = useState(localStorage.getItem("theme"))
-  // const [themeConfig, setThemeConfig] = useState({})
-
   const themeConfig = useMemo(() => (
     {cssVar:true,algorithm: themes === "dark"?theme.darkAlgorithm:theme.defaultAlgorithm}
   ),[themes])

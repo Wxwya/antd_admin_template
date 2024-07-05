@@ -1,4 +1,4 @@
-import {Layout,Sider,Header,Content,memo,Outlet,HeadboxShadow} from "./rely";
+import {Layout,Sider,Header,Content,memo,Outlet,Head,boxShadow} from "./rely";
 import { Button, Menu } from "antd";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import useLayout from "./useLayout";

@@ -7,7 +7,6 @@ class UserStore {
   userInfo = {
     username:""
   }
-
 }
 
 const useUserStore = create<UserStore>()(
@@ -23,13 +22,8 @@ const getuserinfo = () => {
 
 export const initUserinfo = async () => { 
   const res = await getuserinfo()
-  console.log(res);
-  
   if (res.code === 200) { 
-    console.log(useUserStore.setState);
     useUserStore.setState(state => ({...state,userInfo:res.data}))
-    console.log("设置成功");
-    
   }
 }
 export default createSelectors(useUserStore)
