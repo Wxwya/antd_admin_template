@@ -6,6 +6,7 @@ import type { MenuProps } from "antd";
 const Head = () => {
   const layout = useSystemStore((state) => state.layout);
   const collapsed = useSystemStore((state) => state.collapsed);
+  const pc = useSystemStore((state) => state.pc);
   const items: MenuProps["items"] = useMemo(
     () => [
       {
@@ -38,7 +39,7 @@ const Head = () => {
         className="h-full flex justify-between items-center "
       >
         <div className="h-full flex items-center">
-          {left[layout]}
+          { pc?left[layout]:left.level}
         </div>
         <div>
           <Dropdown menu={{ items }} arrow trigger={["click"]}>

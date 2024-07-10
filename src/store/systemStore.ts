@@ -7,7 +7,8 @@ class StoreState  {
   layout:Layout = "level"
   collapsed= false
   theme= "dark" // 默认深色主题
-  permissions= ["info","about","posts"]
+  permissions = ["info", "about", "posts"]
+  pc=true
 }
 
 const useSystemStore = create<StoreState>()(
@@ -19,7 +20,7 @@ const useSystemStore = create<StoreState>()(
         partialize: (state) =>
           Object.fromEntries(
             Object.entries(state).filter(
-              ([key]) => !["permissions"].includes(key)
+              ([key]) => !["permissions","pc"].includes(key)
             )
           ),
       }
@@ -51,6 +52,18 @@ export const changeTheme = () => {
     };
   });
 };
+export const changePc = (flag:boolean) => { 
+  useSystemStore.setState((state) => ({
+    ...state,
+    pc: flag,
+  }))
+}
+export const closeCollapsed = () => {
+  useSystemStore.setState((state) => ({
+    ...state,
+    collapsed: false,
+  }))
+ }
 export default createSelectors(useSystemStore);
 /**
  *

@@ -6,8 +6,10 @@ const authRouter:FC<{ children: ReactNode }>  = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
+    console.log(userInfo.name);
+    
     if (!userInfo.username && location.pathname !== "/login") {
-     initUserinfo()
+      initUserinfo()
     }
     if (userInfo.username && location.pathname === "/login") {
       navigate("/");
