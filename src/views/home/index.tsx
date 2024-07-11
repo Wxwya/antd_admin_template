@@ -36,13 +36,7 @@ const options = [
     ],
   },
 ];
-const normFile = (e: any) => {
-  console.log('Upload event:', e);
-  if (Array.isArray(e)) {
-    return e;
-  }
-  return e?.fileList;
-};
+
 const Home = () => { 
   const navigate = useNavigate()
   const toPage = () => {
@@ -59,7 +53,7 @@ const Home = () => {
       { type: 'casc', item: { label: "多级", name: "dj" }, content: { options } },
       { type: "switch", item: { label: "开关", name: "switch" }, content: {} },
       { type: "number", item: { label: "数字", name: "number" } },
-      { type: "upload", item: { label: "图片上传", name: "images",valuePropName:"fileList",getValueFromEvent:normFile},content: {} }
+      { type: "upload", item: { label: "图片上传", name: "images",},content: {urls:'http://127.0.0.1:9898/api/system/upfile'} }
     ]
   ),[])
   return (<>
